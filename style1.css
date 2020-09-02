@@ -1,0 +1,71 @@
+
+body {
+	background-color: #dce4e6;
+	background-image: media/tenniscourt.jpg
+}
+
+h1 {
+	color: black;
+	text-align: center;
+	font-size: 35px
+	font-family: arial, sans-serif;
+}
+
+p {
+	margin-top: 20px;
+	color: green;
+	font-family: arial;
+	font-size: 20px;
+	}
+		
+fieldset {
+	background: #f0aaa1;
+	margin: 10px;
+	border-collapse: separate;
+	border-spacing: 15px 50px;
+	font-family: arial, sans-serif;
+}
+		
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+/*	width: 50%;*/
+	background: #9dc4a8;
+	text-align: center;
+}
+		
+	
+
+td {
+	border: 1px solid black;
+	text-align: center;
+	padding: 6px;
+	
+}
+
+th {
+	border: 1px solid black;
+	text-align: center;
+	padding: 6px;
+	color: purple;
+	
+}
+
+/* tr:nth-child(odd) {
+	background-color: #dddddd; 
+}*/
+		
+label { 
+	float: left; 
+} 
+  
+span { 
+	display: block; 
+	overflow: hidden; 
+	padding: 0px 4px 0px 6px; 
+} 
+  
+input { 
+	width: 10%; 
+} 			
+		
