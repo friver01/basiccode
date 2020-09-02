@@ -4,11 +4,8 @@ function clear () {
 	$('#addressYear').prop('selectedIndex',0); 
 	$('#share').prop('selectedIndex',0);
 	$('#categories').prop('selectedIndex',0);
-	$('#parameter1').prop('selectedIndex',0);
-	$('#parameter2').prop('selectedIndex',0);
-	document.getElementById('surname').value = "";
-	document.getElementById('addressYear').value = "";	
-	return;
+	$('#parameter1').prop('selectedIndex',0');
+	$('#parameter2').prop('selectedIndex',0');
 };
 
 Clear.addEventListener("click", clear);
