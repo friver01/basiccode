@@ -1,0 +1,202 @@
+<!-- The HTML file associated with this file can be reach in Birkbeck CS Department server at
+https://titan.dcs.bbk.ac.uk/~friver01/TESTJSPATHINDEX20
+
+In the server you can find also the different versions of the code written to produce this solution with the 
+different steps and the timestamps when the file was last modified.
+
+I confirm that this coursework submission is entirely my own work, except where explicitly stated
+otherwise
+-->
+
+
+
+<!DOCTYPE html>
+
+<meta charset="ISO-8859-1">
+
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/jspath.js"></script> 
+	<link rel="stylesheet" type="text/css" href="styles/style1.css" media="screen"/>
+	
+<!-- Here I am including the links to the DSL jspath.js that enables the navigation in a json file
+I am also including the links to my css style file and finally the link to my jquery source. I find 
+jquery particulary useful to simplify my code
+-->
+
+	</head>
+<!-- The overall structure of the HTML body is quite simple as requested: the body is divided in 3 div where
+I deal with sectors, I include another part to gather the input we are requesting and finally another part with
+the outcome in 3 different colors.
+-->		
+
+	
+	<body>
+
+		<h1 id ='Header'>Nobel Prizes Awards & Laureates</h1>
+
+		<p1 id ='input'> <b>Selectors: add your choices to input <b> </p>	
+			
+		<div id='div3' style="border:1px solid black; width:100% ;background-color:#e0cece">
+				<form id = 'form1'>
+				
+			
+		<fieldset>
+
+<!-- In this fielset I am including all the variables requested for the search. There are 4 parts (one for each variable)
+and 2 additional select forms to choose the sign in year and share. As recommended in the instructions I have chosen a 
+close select form for Category and Share and open text fields for year and surname search. In all variables I will trigger
+an alarm so the user can double-check the input value that is appended to the second part of the html
+-->	
+	
+			<label for='categories'>Category:</label>
+			<select id='categories'>
+				<option value=''></option>
+				<option value='ph'>physics</option>
+				<option value='ch'>chemistry</option>
+				<option value='md'>medicine</option>
+				<option value='lt'>literature</option>
+				<option value='pe'>peace</option>
+				<option value='ec'>economics</option>
+			</select>		
+
+<!-- I just include the categories found in the nobel.json file. In this case the value is not very relevant as I will
+only use the text later in my javascript code.
+-->				
+
+			<br>
+			<br>
+			
+			
+			<label for='addressYear'>Year  :</label>
+			<form>
+
+				<select id='parameter1'>
+					<option value='*='>=</option>				
+					<option value  ='>='> > </option>
+					<option value  ='<='> &lt </option>
+				</select>			
+				
+				<form id='inputYear' action=""  method="get">
+					<input id="addressYear" type="text" placeholder=''> Press Intro to Input
+
+				</form>
+			</form>
+
+<!-- I have decided to use a text field for the year. However in the alert I will introduce latter I give a hint
+about the range that is covered by the file. I also include the comparison parameters I will use later in my Javascript 
+code.
+-->	
+
+			<br>
+			<br>
+			<label for ='surname'>Surname  :</label>
+			<form id ='searchsurname' action="" method="get">               
+				<input id="surname" type="text" placeholder=''> Press Intro to Input
+
+			</form>
+
+<!-- I will use this field to search a substring in the nobel.json file. In the alarm tha I am triggering later I
+will advise that it is case sensitive.
+-->				
+			<br>  			
+
+			<label for='inputshare'>Share:</label>
+			
+			<select id='parameter2'>
+				<option value='*='>=</option>				
+				<option value  ='>='> > </option>
+				<option value  ='<='> &lt </option>
+			</select>
+			
+			
+			<select id='share'>
+				<option value=''></option>				
+				<option value  ='1'>1</option>
+				<option value  ='2'>2</option>
+				<option value  ='3'>3</option>
+				<option value  ='4'>4</option>
+				<option value  ='5'>5</option>
+				<option value  ='6'>6</option>
+
+
+			</select>
+
+<!-- Same pattern for share. I include another select field form to choose the parameter and a select form for the share
+values.
+-->				
+		</fieldset>
+		</form>
+		
+		<br>	
+		<p2>Press Click to view your results.</p2>
+
+		<button id="button" 
+		onclick="document.getElementById('Header').style.color = 'blue'">
+		View Results!</button>
+
+		<p3> Press Click to clear data </p3>	
+		
+		<button id="Clear" > Clear Data!</button>		
+
+<!-- I am adding two buttons after the fieldset. The first one is to retrieve the values selected in the input 
+part of the html in the nobel.json file. 
+The second one is to clear the data in the html. Both can be trigger and their actions are explained in the javascript
+code I will explain later with an addEventListener method.
+-->		
+
+
+
+		<br>		
+		<br>
+		</div>
+
+
+		<br>
+		<br>		
+
+		<p2 id ='input'> <b>Input <b> </p>	
+			
+		<div id='div2' style="border:1px solid black; width:100% ;background-color:#ebcb86">
+			
+			
+
+			
+		<br>
+		</div>
+
+		<br>
+		<br>
+
+		<p3 id ='outcome'> <b>Output <b> </p>	
+			
+		<div id='div1' style="border:1px solid black; width:100% ;background-color:#d8d9ba">
+			
+<!-- These div in the HTML are where I am appending the user input and the results (output) that is retrieved
+from the nobel json file.
+-->	
+
+			
+		<br>
+		</div>
+		
+
+	
+
+		<script src = 'scripts/indexofexample20.js' ></script>
+		<script src = 'scripts/Clear.js' ></script>			
+
+<!-- Finally I add the links to my Javascript code.
+-->	
+		
+		
+		
+		
+		
+
+		
+	</body>
+	
+	
+</html>
