@@ -1,0 +1,1 @@
+select title from books where isbn not in (select isbn from borrowed);

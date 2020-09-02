@@ -1,0 +1,1 @@
+select age, count(age) as num_members from members group by age order by age asc;

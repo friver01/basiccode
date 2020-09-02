@@ -1,0 +1,1 @@
+SELECT name from borrowed, members, books where borrowed.memberNo = members.memberNo and borrowed.isbn = books.isbn and publisher = 'Atlantic Books';

@@ -1,0 +1,1 @@
+select * from books where category = 'Self-Help' and title like '%happy';
