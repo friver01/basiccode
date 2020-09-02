@@ -1,0 +1,42 @@
+		body {
+			background-color: lightblue;
+			
+		}
+
+		h1 {
+			color: black;
+			text-align: center;
+			fort-size: 35px
+		}
+
+		p {
+			margin-top: 10px;
+			color: red;
+			font-family: verdana;
+			font-size: 20px;
+			}
+		
+		fieldset {
+			background: grey;
+			margin: 10px
+		}
+		
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 50%;
+			background: grey;
+			text-align: center;
+		}
+
+		td, th {
+		border: 1px solid #dddddd;
+		text-align: center;
+		padding: 6px;
+		}
+
+		tr:nth-child(even) {
+		background-color: #dddddd;
+		}
+		}
+		
